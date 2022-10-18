@@ -1,0 +1,29 @@
+--Clothing Items in Store
+
+CREATE TABLE Clothing_Store (ID integer primary key, Item text, Price integer, Color text, Quantity integer); 
+
+INSERT INTO Clothing_Store VALUES 
+(1, "Shirt", 8,"black", 10),
+(2, "Denim Pants", 15,"light blue", 20),
+(3, "Long Sleeves", 10,"white",  20),
+(4, "Tank Tops", 5,"black", 7), 
+(5, "Shorts", 12,"khaki", 9), 
+(6, "Short Dresses", 20,"pink", 15),
+(7, "Blouses", 15,"navy", 5), 
+(8, "Short Sleeve Button-up", 14,"white", 4), 
+(9, "Long Sleeve Button-up", 18,"black", 6), 
+(10, "Cargo Pants", 21,"tan", 11), 
+(11, "Graphic Tees", 15,"yellow", 25),
+(12, "Sweatpants", 10,"grey", 18), 
+(13, "Long Dresses", 25,"white", 7), 
+(14, "Fitted Tank", 7,"dark grey", 10), 
+(15, "Capri Pants", 16,"blue", 2);
+
+--display the database ordered by price
+SELECT * FROM Clothing_Store
+ORDER BY quantity asc;
+
+--What is the average price of black clohing items? 
+SELECT AVG(price) "avg black item price" 
+FROM Clothing_Store
+WHERE color="black"
